@@ -1,12 +1,16 @@
+
+
+using namespace std;
+
 public class TicTacToe {
- 
+
     int[][] matrix;
- 
+
     /** Initialize your data structure here. */
     public TicTacToe(int n) {
         matrix = new int[n][n];
     }
- 
+
     /** Player {player} makes a move at ({row}, {col}).
         @param row The row of the board.
         @param col The column of the board.
@@ -17,7 +21,7 @@ public class TicTacToe {
                 -1: Player 2 wins. */
     int move(int row, int col, int player) {
         matrix[row][col]=player;
- 
+
         //check row
         boolean win=true;
         for(int i=0; i<matrix.length; i++){
@@ -26,9 +30,9 @@ public class TicTacToe {
                 break;
             }
         }
- 
+
         if(win) return player;
- 
+
         //check column
         win=true;
         for(int i=0; i<matrix.length; i++){
@@ -37,9 +41,9 @@ public class TicTacToe {
                 break;
             }
         }
- 
+
         if(win) return player;
- 
+
         //check back diagonal
         win=true;
         for(int i=0; i<matrix.length; i++){
@@ -48,9 +52,9 @@ public class TicTacToe {
                 break;
             }
         }
- 
+
         if(win) return player;
- 
+
         //check forward diagonal
         win=true;
         for(int i=0; i<matrix.length; i++){
@@ -59,28 +63,28 @@ public class TicTacToe {
                 break;
             }
         }
- 
+
         if(win) return player;
- 
+
         return 0;
     }
-    
+
     int main()
     {
         int player = -1;
-        
+
         boolean end = false;
-        
+
         int n = 3;
         int r, c, result;
-        
+
         TicTacToe ttt = new TicTacToe(n);
         while(!end)
         {
             player *= -1
             r =  randomInt(0, 3);
             c =  randomInt(0, 3);
-            
+
             result = move(player, r, c);
             if(result != 0)
             {
