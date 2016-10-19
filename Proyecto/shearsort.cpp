@@ -18,16 +18,13 @@ Shearsort::~Shearsort()
 }
 
 
-void sort(){
 
+Shearsort sort(this->n,this->matriz);
 
-	Shearsort m1(this->n, this->matriz);
-	Shearsort sort(n,this->matriz);
+int contador;
+while(contador!=(n+1)){
 
-	int contador;
-		while(contador!=(n+1)){
-
-			for(int x=0; x<n; x++){
+	for(int x=0; x<n; x++){
 
 				if((this->n%2)==0){//filas pares
 					for(int i=0; i<this->n; i++){
@@ -52,10 +49,9 @@ void sort(){
 	    }
 	   }
 	  }
-			for(){}
 			contador+=1;
 	 }
-}
+
 
 void Shearsort::operator~() {
 

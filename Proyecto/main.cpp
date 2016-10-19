@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
   			}
 		}
 
-    Matriz m1(n, mat1);
+    Shearsort m1(n, mat1);
 
 
 
