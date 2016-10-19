@@ -9,8 +9,6 @@ Shearsort::Shearsort()
 }
 Shearsort::Shearsort(int n, double** matriz)
 {
-	///@brief Constructor con atributos
-	this->m =m;
 	this->n =n;
 	this->matriz =matriz;
 }
@@ -22,17 +20,15 @@ Shearsort::~Shearsort()
 
 void sort(){
 
-	int contador;
-	int n = tamano;
-	int matriz[n][n];
-		for(int i=0; i<n; i++){
-				for(int j=0; j<n; j++){
-					matriz[i][j]=arreglo[i];
-	  }
-	 }
 
+	Shearsort m1(this->n, this->matrix);
+	Shearsort sort(n,this->matrix);
+
+	int contador;
 		while(contador!=(n+1)){
+
 			for(int x=0; x<n; x++){
+				
 				if((n%2)==0){//filas pares
 					for(int i=0; i<n; i++){
 						for(int j=0; j<n; j++){
@@ -60,7 +56,6 @@ void sort(){
 			contador+=1;
 	 }
 }
-
 
 void Shearsort::operator~() {
 
