@@ -21,9 +21,10 @@ Shearsort::~Shearsort()
 
 double** Shearsort::sort(){
 
-int contador = 2*(this->n)-1;
+int contador = this->n;
 int temp;
-while (contador!= 0){
+for (int i = 0; i < contador; i++) {
+
 
 
 		for (int i = 0; i < this->n; i++) {
@@ -51,7 +52,7 @@ while (contador!= 0){
 					}
 				}
 			}
-		} contador = contador-1;
+		}
 		for (int i = 0; i < this->n; i++) {
 			for (int j = 0; j < this->n; j++) {
 				for (int k = 0; k < this->n-1; k++) {
@@ -63,7 +64,7 @@ while (contador!= 0){
 					}
 				}
 			}
-		}contador = contador-1;
+		}
 	}
 }
 
