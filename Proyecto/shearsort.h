@@ -17,7 +17,7 @@ public:
   Shearsort();
 	Shearsort(int n, double** matriz);
 	~Shearsort();
-
+  double** sort();
   void operator~();
 
 };
