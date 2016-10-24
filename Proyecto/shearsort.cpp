@@ -19,7 +19,7 @@ Shearsort::~Shearsort()
 
 
 
-double** Shearsort::sort(){
+void Shearsort::sort(){
 
 int contador = this->n;
 int temp;
